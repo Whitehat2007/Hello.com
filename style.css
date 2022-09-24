@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 75);
+}
+.box{
+    position: relative;
+    width: 45em;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 7px; 
+    display: inline-flex;   
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width:100px;
+    height: 790px;
+    background: linear-gradient(rgb(0, 132, 255) 0%,#f719ff 100%);
+    animation: animate 4s linear infinite ;
+
+}
+.box::after{
+    content: '';
+    position:absolute;
+    inset: 4px;
+    background: rgb(0, 0, 75);
+
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+.box h2{
+    position: relative;
+    color: white;
+    font-size: 10em;
+    z-index: 10;
+    display: inline-flex;
+    
+}
